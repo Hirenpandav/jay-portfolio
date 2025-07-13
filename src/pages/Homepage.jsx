@@ -1,6 +1,7 @@
 import React from 'react'
 import bgImage from '../assets/Home-page-bg.png'
 import ggImage from '../assets/global-garner-app.png'
+import ggImage2 from '../assets/global-garner-app2.png'
 import logo from '../assets/logo.svg'
 import aeroUp from '../assets/aero-up.svg'
 
@@ -37,7 +38,7 @@ function Homepage() {
             <div className='flex h-full justify-center items-end pb-20'>
               <div className='flex flex-col items-center gap-2'>
                 <h1 className='text-gray-400 text-3xl font-bold tracking-wider'>Product Designer</h1>
-                <h1 className='text-white text-6xl font-bold'>Jay Chovatiya</h1>
+                <h1 className='text-white text-6xl font-bold'>Hiren pandav</h1>
               </div>
             </div>
           </div>
@@ -85,7 +86,7 @@ function Homepage() {
 
         </section>
 
-        <section className='bg-gray-100 py-20 px-6 mx-w-4xl container mx-auto'>
+        <section className='bg-[#F4F6F9] py-20 px-6 mx-w-4xl container mx-auto'>
           <div className="max-w-5xl mx-auto text-left">
 
             {/* Project Type */}
@@ -140,7 +141,7 @@ function Homepage() {
             {/* Project Image */}
             <div className="w-full rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={ggImage} // Replace with your actual image path
+                src={ggImage2} // Replace with your actual image path
                 alt="Global Garner App Preview"
                 className="w-full h-auto object-cover"
               />
@@ -167,14 +168,14 @@ function Homepage() {
 
         </section>
 
-        <section className='bg-white py-20 px-6 mx-w-4xl container mx-auto'>
+        <section className='bg-[#F4F6F9] py-20 px-6 mx-w-4xl container mx-auto'>
           <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
             <h2 className='text-md font-semibold text-gray-600 mb-4'>
               Let's Build Something Together
             </h2>
 
             <p className='text-2xl font-bold text-gray-900 mb-8'>
-              jaychovatiya@gmail.com
+              pandavhiren4@gmail.com
             </p>
 
             <div className='flex gap-4'>
