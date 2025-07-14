@@ -5,27 +5,49 @@ import ggImage2 from '../assets/global-garner-app2.png'
 import logo from '../assets/logo.svg'
 import aeroUp from '../assets/aero-up.svg'
 import downAerrow from '../assets/down-aerrow.svg'
-
+import { useState } from "react";
+import { X, Menu } from 'lucide-react';
 function Homepage() {
+
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="homepage">
       {/* Sticky Header */}
       <div className='flex justify-center w-full'>
         <header className="fixed top-4 z-50 w-full max-w-2xl px-4">
-          <nav className="flex justify-between items-center bg-white px-6 py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
-            <div className="flex items-center gap-2">
-              <img src={logo} alt="ova" className="h-8" />
+          {!isOpen ? (
+            <nav className="flex justify-between items-center bg-white px-6 py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
+              <div className="flex items-center">
+                <img src={logo} alt="ova" className="h-8" />
+              </div>
+              <div className="md:flex hidden items-center gap-6">
+                <a href="#work" className="px-5 py-1.5 bg-[#12B76A] text-white rounded-full font-medium">Work</a>
+                <a href="#about" className="text-gray-600 hover:text-black font-medium">About</a>
+                <a href="#contact" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+                <a href="#resume" className="text-gray-600 hover:text-gray-900 font-medium">Resume</a>
+              </div>
+              <button className="md:hidden" onClick={() => setIsOpen(true)}>
+                <Menu className="text-green-600 w-6 h-6" />
+              </button>
+            </nav>
+          ) : (
+            <div className="fixed top-4 left-1/2 -translate-x-1/2 w-full bg-white rounded-3xl shadow-xl z-50 p-6">
+              <div className="flex justify-between items-start">
+                <img src={logo} alt="ova" className="h-8 max-w-full" />
+                <button onClick={() => setIsOpen(false)}>
+                  <X className="w-5 h-5 text-gray-500" />
+                </button>
+              </div>
+              <div className="mt-6 flex flex-col items-center gap-4 text-center">
+                <a href="#work" className="px-6 py-2 bg-[#12B76A] text-white rounded-full font-medium w-full text-center">Work</a>
+                <a href="#about" className="text-gray-800 font-medium">About</a>
+                <a href="#contact" className="text-gray-800 font-medium">Contact</a>
+                <a href="#resume" className="text-gray-800 font-medium">Resume</a>
+              </div>
             </div>
-            <div className="flex items-center gap-6">
-              <a href="#work" className="px-5 py-1.5 bg-[#12B76A] text-white rounded-full font-medium">Work</a>
-              <a href="#about" className="text-gray-600 hover:text-black font-medium">About</a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
-              <a href="#resume" className="text-gray-600 hover:text-gray-900 font-medium">Resume</a>
-            </div>
-          </nav>
+          )}
         </header>
       </div>
-
       {/* Hero section */}
       <section className="relative">
         <div
