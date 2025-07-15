@@ -7,6 +7,7 @@ import aeroUp from '../assets/aero-up.svg'
 import downAerrow from '../assets/down-aerrow.svg'
 import { useState } from "react";
 import { X, Menu } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 function Homepage() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ function Homepage() {
       {/* Sticky Header */}
       <div className='flex justify-center w-full'>
         <header className="fixed top-4 z-50 w-full max-w-2xl px-4">
-          {!isOpen ? (
+          {!isOpen && (
             <nav className="flex justify-between items-center bg-white px-6 py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
               <div className="flex items-center">
                 <img src={logo} alt="ova" className="h-8" />
@@ -30,22 +31,33 @@ function Homepage() {
                 <Menu className="text-green-600 w-6 h-6" />
               </button>
             </nav>
-          ) : (
-            <div className="items-center bg-white px-6 py-3 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200">
+          )}
+
+          <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, scale: 1, y: -10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.99, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="bg-white px-6 py-4 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200"
+            >
               <div className="flex justify-between items-start">
-                <img src={logo} alt="ova" className="h-8 max-w-full" />
+                <img src={logo} alt="ova" className="h-8" />
                 <button onClick={() => setIsOpen(false)}>
                   <X className="w-5 h-5 text-gray-500" />
                 </button>
               </div>
+
               <div className="mt-6 flex flex-col items-center gap-4 text-center">
                 <a href="#work" className="px-6 py-2 bg-[#12B76A] text-white rounded-full font-medium w-full text-center">Work</a>
                 <a href="#about" className="text-gray-800 font-medium">About</a>
                 <a href="#contact" className="text-gray-800 font-medium">Contact</a>
                 <a href="#resume" className="text-gray-800 font-medium">Resume</a>
               </div>
-            </div>
+            </motion.div>
           )}
+        </AnimatePresence>
         </header>
       </div>
       {/* Hero section */}
