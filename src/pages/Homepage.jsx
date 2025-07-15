@@ -31,7 +31,7 @@ function Homepage() {
               </button>
             </nav>
           ) : (
-            <div className="fixed top-4 left-1/2 -translate-x-1/2 w-full bg-white rounded-3xl shadow-xl z-50 p-6">
+            <div className="items-center bg-white px-6 py-3 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200">
               <div className="flex justify-between items-start">
                 <img src={logo} alt="ova" className="h-8 max-w-full" />
                 <button onClick={() => setIsOpen(false)}>
@@ -60,8 +60,8 @@ function Homepage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent">
           <div className='flex h-full justify-center items-end pb-20'>
             <div className='flex flex-col items-center gap-2'>
-              <h1 className='text-gray-400 text-3xl font-bold tracking-wider'>Product Designer</h1>
-              <h1 className='text-white text-6xl font-bold'>Hiren pandav</h1>
+              <h1 className='text-gray-400 text-xl font-bold sm:text-3xl md:text-4xl'>Product Designer</h1>
+              <h1 className='text-white text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl'>Hiren pandav</h1>
             </div>
           </div>
         </div>
@@ -74,9 +74,9 @@ function Homepage() {
       </section>
 
       {/* Get In touch */}
-      <section className='bg-white py-30'>
+      <section className='bg-white py-25 px-6'>
         <div className='max-w-5xl w-full container mx-auto flex flex-col'>
-          <h1 className='text-3xl text-left font-semibold'>Hello, I’m Jay. I'm a designer passionate about creating beautiful, intuitive interfaces that help people. I focus on thoughtful details, seamless experiences, and meaningful impact.</h1>
+          <h1 className='text-2xl sm:text-3xl text-left font-semibold'>Hello, I’m Jay. I'm a designer passionate about creating beautiful, intuitive interfaces that help people. I focus on thoughtful details, seamless experiences, and meaningful impact.</h1>
           <div className='flex gap-4 mt-6 w-full'>
             <a
               href="#contact"
@@ -102,7 +102,7 @@ function Homepage() {
           <p className="text-green-600 font-semibold text-lg mb-2">Mobile</p>
 
           {/* Project Title */}
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-8">
             Global Garner - Universal App
           </h2>
 
@@ -143,7 +143,7 @@ function Homepage() {
           <p className="text-green-600 font-semibold text-lg mb-2">Mobile</p>
 
           {/* Project Title */}
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-8">
             Global Garner - Universal App
           </h2>
 
@@ -178,7 +178,7 @@ function Homepage() {
       </section>
 
       <section className='bg-[#F4F6F9]'>
-        <div className='flex flex-col items-center text-center max-w-2xl mx-auto py-15'>
+        <div className='flex flex-col items-center text-center max-w-2xl mx-auto py-10'>
           <h2 className='text-md font-semibold text-gray-600 mb-4'>
             Let's Build Something Together
           </h2>
@@ -187,25 +187,19 @@ function Homepage() {
             pandavhiren4@gmail.com
           </p>
 
-          <div className='flex gap-4'>
-            <a
-              href="#contact"
-              className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
-            >
+          <div className='flex gap-2'>
+            <a href="#contact"
+              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition">
               LinkedIn
               <img src={aeroUp} alt="" className='w-4 h-4' />
             </a>
-            <a
-              href="#contact"
-              className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
-            >
+            <a href="#contact"
+              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition">
               Twitter
               <img src={aeroUp} alt="" className='w-4 h-4' />
             </a>
-            <a
-              href="#contact"
-              className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
-            >
+            <a href="#contact"
+              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition">
               Email
               <img src={aeroUp} alt="" className='w-4 h-4' />
             </a>
