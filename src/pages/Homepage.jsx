@@ -72,13 +72,13 @@ function Homepage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent">
           <div className='flex h-full justify-center items-end pb-20'>
             <div className='flex flex-col items-center gap-2'>
-              <h1 className='text-gray-400 text-xl font-bold sm:text-3xl md:text-4xl'>Product Designer</h1>
-              <h1 className='text-white text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl'>Hiren pandav</h1>
+              <h1 className='text-gray-400 text-xl font-semibold sm:text-3xl md:text-4xl'>Product Designer</h1>
+              <h1 className='text-white text-4xl font-semibold tracking-wider sm:text-5xl md:text-6xl'>Jay chovatiya</h1>
             </div>
           </div>
         </div>
         {/* Bouncing Scroll Down Button */}
-        <div className="absolute bottom-[-34px] left-1/2 transform -translate-x-1/2 animate-bounce  bg-white rounded-full p-[5px] shadow-lg">
+        <div className="absolute bottom-[-34px] left-1/2 transform -translate-x-1/2 animate-bounce  bg-white rounded-full p-[5px]">
           <div className="bg-gray-300 rounded-full p-4">
             <img src={downAerrow} alt="" className='w-4 h-4' />
           </div>
@@ -119,7 +119,7 @@ function Homepage() {
           </h2>
 
           {/* Project Image */}
-          <div className="w-full rounded-2xl overflow-hidden shadow-lg m-1">
+          <div className="w-full rounded-3xl overflow-hidden shadow-lg m-1">
             <img
               src={ggImage} // Replace with your actual image path
               alt="Global Garner App Preview"
@@ -160,7 +160,7 @@ function Homepage() {
           </h2>
 
           {/* Project Image */}
-          <div className="w-full rounded-2xl overflow-hidden shadow-lg">
+          <div className="w-full rounded-3xl overflow-hidden shadow-lg">
             <img
               src={ggImage2} // Replace with your actual image path
               alt="Global Garner App Preview"
@@ -196,7 +196,7 @@ function Homepage() {
           </h2>
 
           <p className='text-2xl font-bold text-gray-900 mb-8'>
-            pandavhiren4@gmail.com
+            jaychovatiya@gmail.com
           </p>
 
           <div className='flex gap-2'>
