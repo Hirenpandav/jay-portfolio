@@ -2,19 +2,21 @@ import React from 'react'
 import bgImage from '../assets/Home-page-bg.png'
 import ggImage from '../assets/global-garner-app.png'
 import ggImage2 from '../assets/global-garner-app2.png'
-import logo from '../assets/logo.svg'
+
 import aeroUp from '../assets/aero-up.svg'
 import downAerrow from '../assets/down-aerrow.svg'
-import { useState } from "react";
-import { X, Menu } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Header from '../component/Header'
+import Footer from '../component/Footer'
+
+
+
 function Homepage() {
 
-  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="homepage">
       {/* Sticky Header */}
-      <div className='flex justify-center w-full'>
+      {/* <div className='flex justify-center w-full'>
         <header className="fixed top-4 z-50 w-full max-w-2xl px-4">
           {!isOpen && (
             <nav className="flex justify-between items-center bg-white px-6 py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
@@ -22,10 +24,10 @@ function Homepage() {
                 <img src={logo} alt="ova" className="h-8" />
               </div>
               <div className="md:flex hidden items-center gap-6">
-                <a href="#work" className="px-5 py-1.5 bg-[#12B76A] text-white rounded-full font-medium">Work</a>
-                <a href="#about" className="text-gray-600 hover:text-black font-medium">About</a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
-                <a href="#resume" className="text-gray-600 hover:text-gray-900 font-medium">Resume</a>
+                <Link to="#work" className="px-5 py-1.5 bg-[#12B76A] text-white rounded-full font-medium">Work</Link>
+                <Link to="/about" className="text-gray-600 hover:text-black font-medium">About</Link>
+                <Link to="#contact" className="text-gray-600 hover:text-gray-900 font-medium">Contact</Link>
+                <Link to="#resume" className="text-gray-600 hover:text-gray-900 font-medium">Resume</Link>
               </div>
               <button className="md:hidden" onClick={() => setIsOpen(true)}>
                 <Menu className="text-green-600 w-6 h-6" />
@@ -34,32 +36,33 @@ function Homepage() {
           )}
 
           <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, scale: 1, y: -10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.99, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white px-6 py-4 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200"
-            >
-              <div className="flex justify-between items-start">
-                <img src={logo} alt="ova" className="h-8" />
-                <button onClick={() => setIsOpen(false)}>
-                  <X className="w-5 h-5 text-gray-500" />
-                </button>
-              </div>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, scale: 1, y: -10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.99, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white px-6 py-4 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200"
+              >
+                <div className="flex justify-between items-start">
+                  <img src={logo} alt="ova" className="h-8" />
+                  <button onClick={() => setIsOpen(false)}>
+                    <X className="w-5 h-5 text-gray-500" />
+                  </button>
+                </div>
 
-              <div className="mt-6 flex flex-col items-center gap-4 text-center">
-                <a href="#work" className="px-6 py-2 bg-[#12B76A] text-white rounded-full font-medium w-full text-center">Work</a>
-                <a href="#about" className="text-gray-800 font-medium">About</a>
-                <a href="#contact" className="text-gray-800 font-medium">Contact</a>
-                <a href="#resume" className="text-gray-800 font-medium">Resume</a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <div className="mt-6 flex flex-col items-center gap-4 text-center">
+                  <a href="#work" className="px-6 py-2 bg-[#12B76A] text-white rounded-full font-medium w-full text-center">Work</a>
+                  <a href="#about" className="text-gray-800 font-medium">About</a>
+                  <a href="#contact" className="text-gray-800 font-medium">Contact</a>
+                  <a href="#resume" className="text-gray-800 font-medium">Resume</a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </header>
-      </div>
+      </div> */}
+      <Header></Header>
       {/* Hero section */}
       <section className="relative">
         <div
@@ -188,40 +191,7 @@ function Homepage() {
         </div>
 
       </section>
-
-      <section className='bg-[#F4F6F9]'>
-        <div className='flex flex-col items-center text-center max-w-2xl mx-auto py-10'>
-          <h2 className='text-md font-semibold text-gray-600 mb-4'>
-            Let's Build Something Together
-          </h2>
-
-          <p className='text-2xl font-bold text-gray-900 mb-8'>
-            jaychovatiya@gmail.com
-          </p>
-
-          <div className='flex gap-2'>
-            <a href="#contact"
-              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition">
-              LinkedIn
-              <img src={aeroUp} alt="" className='w-4 h-4' />
-            </a>
-            <a href="#contact"
-              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition">
-              Twitter
-              <img src={aeroUp} alt="" className='w-4 h-4' />
-            </a>
-            <a href="#contact"
-              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition">
-              Email
-              <img src={aeroUp} alt="" className='w-4 h-4' />
-            </a>
-          </div>
-        </div>
-        <div className="w-full h-[1px] bg-gray-200"></div>
-        <p className='text-gray-400 text-xs font-bold text-center py-3'>
-          © 2025 All rights reserved
-        </p>
-      </section>
+      <Footer></Footer>
     </div>
   )
 }
