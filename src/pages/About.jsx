@@ -14,7 +14,7 @@ function About() {
         <Header></Header>
         <div className='max-w-2xl sm:max-w-5xl px-5 mx-auto'>
             <div className='flex justify-center'>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5 items-start w-full max-w-xl md:max-w-5xl pt-30'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-10 items-start w-full max-w-xl md:max-w-5xl pt-30'>
 
                     {/* Image Section */}
                     <div className='w-full h-full'>

@@ -19,7 +19,7 @@ function Homepage() {
       {/* Hero section */}
       <section className="relative">
         <div
-          className="min-h-[90vh] flex flex-col justify-center bg-cover bg-center"
+          className="min-h-[100vh] flex flex-col justify-center bg-cover bg-center"
           style={{
             backgroundImage: `url(${bgImage})`
           }}
