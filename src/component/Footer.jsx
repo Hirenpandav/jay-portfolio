@@ -23,15 +23,15 @@ const Footer = () => {
               LinkedIn
               <img src={aeroUp} alt="" className='w-4 h-4' />
             </a>
-            <a
+            {/* <a
               href="https://x.com/Jaichovatiya?t=tJ9Q9Ye8biqg1pgYJ6Xbaw&s=09"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-gray-300 rounded-full px-4 py-2 text-sm text-black flex items-center gap-1 hover:bg-black hover:text-white transition"
             >
-              Twitter
+              X (Twitter)
               <img src={aeroUp} alt="" className='w-4 h-4' />
-            </a>
+            </a> */}
             <a
               href="mailto:jaychovatiya786@gmail.com"
               target="_blank"
