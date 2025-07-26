@@ -52,9 +52,18 @@ function About() {
 
             <div className='flex justify-center items-center min-h-screen py-20'>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className='md:row-span-2 rounded-2xl'><img src={gridimage1} alt="" className='h-full w-full' /></div>
-                    <div className='md:col-span-2 rounded-2xl'><img src={gridimage2} alt="" className='h-full w-full' /></div>
-                    <div className='rounded-2xl'><img src={gridimage3} alt="" className='h-full w-full' /></div>
+                    <div className='md:row-span-2 rounded-2xl'>
+                        <img src={gridimage1} alt="" className='h-full w-full' />
+                    </div>
+                    <div className='md:col-span-2 rounded-2xl'>
+                        <img src={gridimage2} alt="" className='h-full w-full' />
+                    </div>
+                    <div className='order-first rounded-2xl bg-gradient-to-b from-lime-400 to-green-600 p-6 flex flex-col justify-center h-full'>
+                        <span className="text-green-900 font-semibold italic mb-2 text-lg">B-Side</span>
+                        <p className="text-white font-medium text-2xl">
+                            Personal project for skills enhancement and self-driven initiatives that can help you learn and develop new skills.
+                        </p>
+                    </div>
                     <div className='rounded-2xl'><img src={gridimage3} alt="" className='h-full w-full ' /></div>
                     <div className='rounded-2xl md:col-span-2'><img src={gridimage4} alt="" className='h-full w-full' /></div>
                     <div className='rounded-2xl '><img src={gridimage5} alt="" className='h-full w-full' /></div>

@@ -75,7 +75,7 @@ const Contact = () => {
 
       {/* Contact Form */}
       <section className="py-20 bg-white flex justify-center px-4 md:mt-[-150px]">
-        <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-8 rounded-xl shadow-xl space-y-5 z-5">
+        <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-8 rounded-xl shadow-md space-y-5 z-5">
           <h2 className="text-2xl font-semibold mb-4">Let's get in touch</h2>
           <p className="text-sm text-gray-500 mb-6">Welcome! Please enter your details.</p>
 
@@ -119,7 +119,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
+            className="w-full bg-black text-white py-3 rounded-full hover:bg-gray-800 transition"
           >
             Submit
           </button>
