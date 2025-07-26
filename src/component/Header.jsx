@@ -15,10 +15,10 @@ const Header = () => {
                 <Link to="/"><img src={logo} alt="ova" className="h-8" /></Link>
               </div>
               <div className="md:flex hidden items-center">
-                <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Work</Link>
-                <Link to="/about" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/about' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>About</Link>
-                <Link to="/contact" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Contact</Link>
-                <Link to="/resume" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Resume</Link>                
+                <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/' ? 'bg-[#12B76A] text-white' : 'text-gray-500 hover:text-black'}`}>Work</Link>
+                <Link to="/about" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/about' ? 'bg-[#12B76A] text-white' : 'text-gray-500 hover:text-black'}`}>About</Link>
+                <Link to="/contact" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-500 hover:text-black'}`}>Contact</Link>
+                <Link to="/resume" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-500 hover:text-black'}`}>Resume</Link>                
               </div>
               <button className="md:hidden px-4" onClick={() => setIsOpen(true)}>
                 <Menu className="text-green-600 w-6 h-6 " />

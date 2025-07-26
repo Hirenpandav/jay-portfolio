@@ -8,6 +8,7 @@ import gridimage5 from '../assets/gridimage5.png'
 import profilePic from '../assets/profile-pic.png'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import { Link } from 'react-router-dom'
 function About() {
     return (
         <>
@@ -33,13 +34,13 @@ function About() {
                             </p>
                         </div>
                         <div className='flex gap-4 mt-2 flex-wrap'>
-                            <a
-                                href="#contact"
+                            <Link
+                                to="/contact"
                                 className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
-                            >
+                                >
                                 Get in touch
                                 <img src={aeroUp} alt="" className='w-4 h-4' />
-                            </a>
+                            </Link>
                             <div className="flex items-center text-green-600 font-medium">
                                 <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
                                 Open for work

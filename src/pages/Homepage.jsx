@@ -7,6 +7,7 @@ import aeroUp from '../assets/aero-up.svg'
 import downAerrow from '../assets/down-aerrow.svg'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import { Link } from 'react-router-dom'
 
 
 
@@ -46,13 +47,13 @@ function Homepage() {
         <div className='max-w-5xl w-full container mx-auto flex flex-col'>
           <h1 className='text-2xl sm:text-3xl text-left font-semibold'>Hello, I’m Jay. I'm a designer passionate about creating beautiful, intuitive interfaces that help people. I focus on thoughtful details, seamless experiences, and meaningful impact.</h1>
           <div className='flex gap-4 mt-6 w-full'>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
             >
               Get in touch
               <img src={aeroUp} alt="" className='w-4 h-4' />
-            </a>
+            </Link>
 
             <div className="flex items-center text-green-600 font-medium">
               <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
@@ -104,7 +105,7 @@ function Homepage() {
 
       </section>
 
-      <section className='bg-white-100 mx-w-4xl mx-auto py-20'>
+      <section className='bg-white-100 mx-w-4xl mx-auto py-20 px-6'>
         <div className="max-w-5xl mx-auto text-left">
 
           {/* Project Type */}
