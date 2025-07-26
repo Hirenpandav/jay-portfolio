@@ -104,7 +104,7 @@ function Homepage() {
 
       </section>
 
-      <section className='bg-white-100 py-20 px-6 mx-w-4xl mx-auto'>
+      <section className='bg-white-100 mx-w-4xl mx-auto py-20'>
         <div className="max-w-5xl mx-auto text-left">
 
           {/* Project Type */}

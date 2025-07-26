@@ -49,7 +49,7 @@ function About() {
                 </div>
             </div>
 
-            <div className='flex justify-center items-center min-h-screen py-5'>
+            <div className='flex justify-center items-center min-h-screen py-20'>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className='md:row-span-2 rounded-2xl'><img src={gridimage1} alt="" className='h-full w-full' /></div>
                     <div className='md:col-span-2 rounded-2xl'><img src={gridimage2} alt="" className='h-full w-full' /></div>

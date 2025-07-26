@@ -20,8 +20,8 @@ const Header = () => {
                 <Link to="/contact" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Contact</Link>
                 <Link to="/resume" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Resume</Link>                
               </div>
-              <button className="md:hidden" onClick={() => setIsOpen(true)}>
-                <Menu className="text-green-600 w-6 h-6" />
+              <button className="md:hidden px-4" onClick={() => setIsOpen(true)}>
+                <Menu className="text-green-600 w-6 h-6 " />
               </button>
             </nav>
           )}
@@ -33,7 +33,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.99, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="bg-white px-6 py-4 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200"
+                className="bg-white px-6 py-6 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200"
               >
                 <div className="flex justify-between items-start">
                   <img src={logo} alt="ova" className="h-8" />

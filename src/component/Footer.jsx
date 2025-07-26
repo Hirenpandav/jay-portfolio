@@ -3,8 +3,8 @@ import aeroUp from '../assets/aero-up.svg'
 
 const Footer = () => {
   return (
-    <section className='bg-[#F4F6F9]'>
-        <div className='flex flex-col items-center text-center max-w-2xl mx-auto py-10'>
+    <section className='bg-[#F4F6F9] mt-20'>
+        <div className='flex flex-col items-center text-center max-w-2xl mx-auto py-20'>
           <h2 className='text-md font-semibold text-gray-600 mb-4'>
             Let's Build Something Together
           </h2>
