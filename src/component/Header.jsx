@@ -8,10 +8,10 @@ const Header = () => {
   const location = useLocation();
   return (
     <div className='flex justify-center w-full'>
-        <header className="fixed top-4 z-50 w-full max-w-2xl px-4">
+        <header className="fixed top-4 z-50 w-full max-w-xl px-4">
           {!isOpen && (
-            <nav className="flex justify-between items-center bg-white px-6 py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
-              <div className="flex items-center">
+            <nav className="flex justify-between items-center bg-white py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
+              <div className="flex items-center px-4">
                 <Link to="/"><img src={logo} alt="ova" className="h-8" /></Link>
               </div>
               <div className="md:flex hidden items-center">
