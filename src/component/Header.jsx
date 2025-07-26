@@ -12,12 +12,12 @@ const Header = () => {
           {!isOpen && (
             <nav className="flex justify-between items-center bg-white px-6 py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
               <div className="flex items-center">
-                <img src={logo} alt="ova" className="h-8" />
+                <Link to="/"><img src={logo} alt="ova" className="h-8" /></Link>
               </div>
               <div className="md:flex hidden items-center gap-6">
                 <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Work</Link>
                 <Link to="/about" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/about' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>About</Link>
-                <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Contact</Link>
+                <Link to="/contact" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Contact</Link>
                 <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Resume</Link>
                 
               </div>
@@ -46,7 +46,7 @@ const Header = () => {
                 <div className="mt-6 flex flex-col items-center gap-4 text-center">
                   <Link to="/" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Work</Link>
                   <Link to="/about" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/about' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>About</Link>
-                  <Link to="/" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Contact</Link>
+                  <Link to="/contact" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Contact</Link>
                   <Link to="/" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Resume</Link>
                 </div>
               </motion.div>
