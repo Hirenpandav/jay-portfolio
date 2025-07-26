@@ -18,7 +18,7 @@ const Header = () => {
                 <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Work</Link>
                 <Link to="/about" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/about' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>About</Link>
                 <Link to="/contact" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Contact</Link>
-                <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Resume</Link>
+                <Link to="/resume" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-600'}`}>Resume</Link>
                 
               </div>
               <button className="md:hidden" onClick={() => setIsOpen(true)}>
@@ -47,7 +47,7 @@ const Header = () => {
                   <Link to="/" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Work</Link>
                   <Link to="/about" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/about' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>About</Link>
                   <Link to="/contact" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/contact' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Contact</Link>
-                  <Link to="/" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Resume</Link>
+                  <Link to="/resume" className={`px-5 rounded-full py-1.5 text-gray-800 font-medium ${location.pathname === '/resume' ? 'bg-[#12B76A] text-white' : 'text-gray-800'}`}>Resume</Link>
                 </div>
               </motion.div>
             )}
