@@ -58,7 +58,7 @@ function About() {
                     <div className='md:col-span-2 rounded-2xl'>
                         <img src={gridimage2} alt="" className='h-full w-full' />
                     </div>
-                    <div className='order-first rounded-2xl bg-gradient-to-b from-lime-400 to-green-600 p-6 flex flex-col justify-center h-full'>
+                    <div className='order-first md:order-none rounded-2xl bg-gradient-to-b from-lime-400 to-green-600 p-6 flex flex-col justify-center h-full'>
                         <span className="text-green-900 font-semibold italic mb-2 text-lg">B-Side</span>
                         <p className="text-white font-medium text-2xl">
                             Personal project for skills enhancement and self-driven initiatives that can help you learn and develop new skills.
