@@ -26,7 +26,7 @@ function Homepage() {
         stagger: 0.1, // one by one
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top 10%", // animation starts
+          start: "top 80%", // animation starts
           end: "bottom 30%", // ends
           scrub: true, // sync with scroll
 
@@ -83,7 +83,7 @@ function Homepage() {
         <div className='max-w-5xl w-full container mx-auto flex flex-col'>
           <h1
             ref={textRef}
-            className='text-[70px] sm:text-[25px] text-left font-semibold flex flex-wrap leading-relaxed'
+            className='text-[40px] sm:text-[55px] text-left font-semibold flex flex-wrap leading-relaxed'
           >
             {introText.split(" ").map((word, i) => (
               <span key={i} className="transition-colors duration-500 mr-2">
