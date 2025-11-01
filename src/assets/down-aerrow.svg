@@ -1,3 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30.681" height="18.487" viewBox="0 0 30.681 18.487">
-  <path id="ic_keyboard_arrow_left_24px" d="M0,26.632,10.535,15.341,0,3.605,4.685,0l13.8,15.341L4.685,30.681Z" transform="translate(30.681) rotate(90)" fill="#707070"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Group_189186" data-name="Group 189186" transform="translate(-879.518 -999.518)">
+    <circle id="Ellipse_4485" data-name="Ellipse 4485" cx="50" cy="50" r="50" transform="translate(879.518 999.518)" fill="#fff" opacity="0"/>
+    <g id="Group_189185" data-name="Group 189185" transform="translate(889.904 1009.904)">
+      <circle id="Ellipse_4486" data-name="Ellipse 4486" cx="40" cy="40" r="40" transform="translate(-0.387 -0.386)" fill="#d1d1d1" opacity="0"/>
+      <g id="Group_189416" data-name="Group 189416" transform="translate(-0.31 -7.907)">
+        <path id="ic_keyboard_arrow_left_24px" d="M0,26.632,10.535,15.341,0,3.605,4.685,0l13.8,15.341L4.685,30.681Z" transform="translate(55.264 30.369) rotate(90)" fill="#fff"/>
+        <path id="ic_keyboard_arrow_left_24px-2" data-name="ic_keyboard_arrow_left_24px" d="M0,18.94l7.492-8.03L0,2.564,3.332,0l9.815,10.91L3.332,21.819Z" transform="translate(50.832 51.525) rotate(90)" fill="#b2b2b2"/>
+      </g>
+    </g>
+  </g>
 </svg>
