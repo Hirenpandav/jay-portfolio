@@ -28,7 +28,7 @@ function Homepage() {
 
     gsap.fromTo(
       words,
-      { color: "#d3d3d3" }, // start light gray
+      { color: "#CFCFCF" }, // start light gray
       {
         color: "#000000", // fade to black
         stagger: 0.1, // one by one
