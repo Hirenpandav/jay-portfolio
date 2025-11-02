@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import bgImage from '../assets/Home-page-bg.png'
-import ggImage from '../assets/global-garner-app.png'
-import ggImage2 from '../assets/global-garner-app2.png'
 import aeroUp from '../assets/aero-up.svg'
 import downAerrow from '../assets/down-aerrow.svg'
 import Header from '../component/Header'
@@ -9,6 +7,16 @@ import Footer from '../component/Footer'
 import { Link } from 'react-router-dom'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+import franchise_360_landing from '../assets/franchise360_landing.png'
+import franchise_360_dashboard from '../assets/franchise360_dashboard.png'
+import jagods from '../assets/jagods.png'
+import ondc from '../assets/Ondc.png'
+import ecommerce from '../assets/Ecommerce.png'
+import gg_product_business from '../assets/GG_product_business-page.png'
+import vendor from '../assets/vendor.png'
+import upos from '../assets/Upos.png'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -37,17 +45,53 @@ function Homepage() {
 
   const projectsData = [
     {
-      title: "Global Garner - Universal App",
-      description: "Discover how to use Procreate's brushes and colors, along with all the essential gestures and tools you need to begin creating digital art on iPad.",
-      image: ggImage,
+      title: "Franchise360 Landing Page",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: franchise_360_landing,
       link: "#contact"
     },
     {
-      title: "Global Garner - Mobile App",
-      description: "A comprehensive mobile application designed for seamless user experience and enhanced functionality across all devices.",
-      image: ggImage2,
+      title: "Franchise360 Dashboard",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: franchise_360_dashboard,
       link: "#contact"
-    }
+    },
+    {
+      title: "Jagods Food Delivery App",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: jagods,
+      link: "#contact"
+    },
+    {
+      title: "ONDC (Open Network for Digital Commerce)",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: ondc,
+      link: "#contact"
+    },
+    {
+      title: "Ecommerce on Global Garner Universal App",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: ecommerce,
+      link: "#contact"
+    },
+    {
+      title: "Global Garner Product Business Page",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: gg_product_business,
+      link: "#contact"
+    },
+    {
+      title: "Vendor App",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: vendor,
+      link: "#contact"
+    },
+    {
+      title: "UPOS Dashboard (Universal Point of Sale)",
+      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      image: upos,
+      link: "#contact"
+    },
   ];
 
   const introText =
