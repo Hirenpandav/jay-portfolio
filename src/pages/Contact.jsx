@@ -49,7 +49,7 @@ const Contact = () => {
       'EdaLzOTKSfwstzKIt'
     )
     .then(() => {
-      setSuccessMessage('Your message has been sent successfully!');
+      setSuccessMessage('Message received! I\'ll get back to you shortly');
       setFormData({ name: '', email: '', project: '', budget: '' });
       setIsSubmitting(false);
     })
@@ -148,15 +148,21 @@ const Contact = () => {
             />
           </div>
 
-          {successMessage && <p className="text-green-600">{successMessage}</p>}
-
-          <button
+          {!successMessage &&<button
             type="submit"
             disabled={isSubmitting}
             className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition"
           >
             {isSubmitting ? 'Sending...' : 'Submit'}
-          </button>
+          </button>}
+
+          {successMessage && <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-[#D1D1D1] text-black py-3 rounded-md transition"
+          >
+            {successMessage}
+          </button>}
         </form>
       </section>
 
