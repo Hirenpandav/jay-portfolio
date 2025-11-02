@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Header from '../component/Header';
 import bgImage from '../assets/Home-page-bg.png';
 import Footer from '../component/Footer';
@@ -12,6 +13,8 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const validate = () => {
     const errs = {};
@@ -29,15 +32,32 @@ const Contact = () => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
-    if (Object.keys(validationErrors).length === 0) {
-      const { name, email, project } = formData;
-      const encodedMessage = encodeURIComponent(
-        `*Hello, I would like to discuss a project.*\n\n*Name* : ${name}\n*Email*: ${email}\n*Project* : ${project}\n*Budget* : ${budget}`
-      );
-        setFormData({ name: '', email: '', project: '', budget: '' });
-      const whatsappURL = `https://wa.me/+919033162943?text=${encodedMessage}`;
-      window.open(whatsappURL, "_blank");
-    }
+    if (Object.keys(validationErrors).length > 0) return;
+    setIsSubmitting(true);
+    emailjs.send(
+      'service_wix13se',
+      'template_whkavtg',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        project: formData.project,
+        budget: formData.budget,
+        title: "New enquiry received",
+        date: new Date().toLocaleDateString(),
+
+      },
+      'EdaLzOTKSfwstzKIt'
+    )
+    .then(() => {
+      setSuccessMessage('Your message has been sent successfully!');
+      setFormData({ name: '', email: '', project: '', budget: '' });
+      setIsSubmitting(false);
+    })
+    .catch((error) => {
+      console.error(error);
+      setSuccessMessage('Something went wrong. Please try again.');
+      setIsSubmitting(false);
+    });
   };
 
   const handleChange = (e) => {
@@ -50,8 +70,6 @@ const Contact = () => {
   return (
     <div>
       <Header />
-
-      {/* Hero Section with Overlay */}
       <section className="relative">
         <div
           className="min-h-[60vh] flex flex-col justify-center bg-cover bg-center"
@@ -111,7 +129,7 @@ const Contact = () => {
             <textarea
               name="project"
               className="w-full border border-gray-200 rounded-lg px-4 py-2 min-h-[100px]"
-              placeholder="Share your thoughts,ideas or questions ..."
+              placeholder="Share your thoughts, ideas or questions..."
               value={formData.project}
               onChange={handleChange}
             />
@@ -128,18 +146,21 @@ const Contact = () => {
               value={formData.budget}
               onChange={handleChange}
             />
-            {errors.budget && <p className="text-red-500 text-sm">{errors.budget}</p>}
           </div>
+
+          {successMessage && <p className="text-green-600">{successMessage}</p>}
+
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 rounded-full hover:bg-gray-800 transition"
+            disabled={isSubmitting}
+            className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition"
           >
-            Submit
+            {isSubmitting ? 'Sending...' : 'Submit'}
           </button>
         </form>
       </section>
 
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
