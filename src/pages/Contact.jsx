@@ -158,7 +158,7 @@ const Contact = () => {
 
           {successMessage && <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={true}
             className="w-full bg-[#D1D1D1] text-black py-3 rounded-md transition"
           >
             {successMessage}
