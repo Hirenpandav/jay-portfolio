@@ -14,7 +14,7 @@ import jagods from '../assets/jagods.png'
 import ondc from '../assets/Ondc.png'
 import ecommerce from '../assets/Ecommerce.png'
 import gg_product_business from '../assets/GG_product_business-page.png'
-import vendor from '../assets/vendor.png'
+import vendor from '../assets/Vendor.png'
 import upos from '../assets/Upos.png'
 
 
