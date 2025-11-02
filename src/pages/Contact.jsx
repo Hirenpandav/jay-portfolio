@@ -8,6 +8,7 @@ const Contact = () => {
     name: '',
     email: '',
     project: '',
+    budget: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -31,9 +32,9 @@ const Contact = () => {
     if (Object.keys(validationErrors).length === 0) {
       const { name, email, project } = formData;
       const encodedMessage = encodeURIComponent(
-        `*Hello, I would like to discuss a project.*\n\n*Name* : ${name}\n*Email*: ${email}\n*Project* : ${project}`
+        `*Hello, I would like to discuss a project.*\n\n*Name* : ${name}\n*Email*: ${email}\n*Project* : ${project}\n*Budget* : ${budget}`
       );
-        setFormData({ name: '', email: '', project: '' });
+        setFormData({ name: '', email: '', project: '', budget: '' });
       const whatsappURL = `https://wa.me/+919033162943?text=${encodedMessage}`;
       window.open(whatsappURL, "_blank");
     }
@@ -80,7 +81,7 @@ const Contact = () => {
           <p className="text-sm text-gray-500 mb-6">Welcome! Please enter your details.</p>
 
           <div>
-            <label className="block font-medium mb-1">Name</label>
+            <label className="block font-medium mb-1">What's your name?</label>
             <input
               type="text"
               name="name"
@@ -93,7 +94,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block font-medium mb-1">Email</label>
+            <label className="block font-medium mb-1">What's your email?</label>
             <input
               type="email"
               name="email"
@@ -106,17 +107,29 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block font-medium mb-1">About Your Project</label>
+            <label className="block font-medium mb-1">How can I help?</label>
             <textarea
               name="project"
               className="w-full border border-gray-200 rounded-lg px-4 py-2 min-h-[100px]"
-              placeholder="Tell us..."
+              placeholder="Share your thoughts,ideas or questions ..."
               value={formData.project}
               onChange={handleChange}
             />
             {errors.project && <p className="text-red-500 text-sm">{errors.project}</p>}
           </div>
 
+          <div>
+            <label className="block font-medium mb-1">What's your approximate budget?</label>
+            <input
+              type="text"
+              name="budget"
+              className="w-full border border-gray-200 rounded-lg px-4 py-2"
+              placeholder="e.g $500 - $5000"
+              value={formData.budget}
+              onChange={handleChange}
+            />
+            {errors.budget && <p className="text-red-500 text-sm">{errors.budget}</p>}
+          </div>
           <button
             type="submit"
             className="w-full bg-black text-white py-3 rounded-full hover:bg-gray-800 transition"
