@@ -153,7 +153,7 @@ const Contact = () => {
             disabled={isSubmitting}
             className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition"
           >
-            {isSubmitting ? 'Sending...' : 'Submit'}
+            {isSubmitting ? 'Sending...' : 'Talk soon'}
           </button>}
 
           {successMessage && <button
