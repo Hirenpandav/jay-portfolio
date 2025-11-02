@@ -60,11 +60,11 @@ function Homepage() {
       {/* Hero section */}
       <section className="relative">
         <div
-          className="min-h-[100vh] flex flex-col justify-center bg-cover bg-center"
+          className="min-h-[90vh] flex flex-col justify-center bg-cover bg-center"
           style={{ backgroundImage: `url(${bgImage})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent">
-          <div className='flex h-full justify-center items-end pb-20'>
+          <div className='flex h-full justify-center items-end pb-22'>
             <div className='flex flex-col items-center gap-2'>
               <h1 className='text-gray-400 text-xl font-semibold sm:text-3xl md:text-4xl'>Product Designer</h1>
               <h1 className='text-white text-4xl font-semibold tracking-wider sm:text-5xl md:text-6xl'>Jay Chovatiya</h1>
