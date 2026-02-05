@@ -46,14 +46,14 @@ function Homepage() {
 
   const projectsData = [
     {
-      title: "Franchise360",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      title: "Digital Growth for Brands (FranchiseBuilder 360)",
+      description: "Helping brands and business owners scale through customized websites, mobile apps, and eCommerce solutions tailored for franchise growth.",
       image: franchise_360_landing,
       link: "#contact"
     },
     {
-      title: "Loyalty Card Made Digital",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      title: "Loyalty Card Made Digital (The Stampit)",
+      description: "focused on improving customer retention through simple reward journeys, real-time tracking, and frictionless interactions.",
       image: stampIt,
       link: "#contact"
     },
@@ -82,8 +82,8 @@ function Homepage() {
     //   link: "#contact"
     // },
     {
-      title: "Global Garner Product Business Page",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+      title: "Business Discovery Experience (Global Garner)",
+      description: "A UX strategy and interface design focused on simplifying business onboarding, product discovery, and partner engagement.",
       image: gg_product_business,
       link: "#contact"
     },
@@ -146,7 +146,7 @@ function Homepage() {
           <div className='flex gap-4 mt-6 w-full'>
             <Link
               to="/contact"
-              className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
+              className="border border-gray-300 rounded-full px-5 py-2 text-black flex items-center gap-1 hover:bg-black hover:text-white transition"
             >
               Get in touch
               <img src={aeroUp} alt="" className='w-4 h-4' />
@@ -162,7 +162,7 @@ function Homepage() {
 
       {/* Projects Section */}
       {projectsData.map((project, index) => (
-        <section key={index} className='px-6 mx-auto pb-20'>
+        <section key={index} className='px-6 mx-auto pb-12'>
           <div className="max-w-5xl mx-auto text-left">
             <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden shadow-lg ">
               <img
@@ -172,7 +172,7 @@ function Homepage() {
               />
             </div>
 
-            <h2 className="text-2xl sm:text-[35px] font-[600] text-gray-900 mb-6 mt-6">
+            <h2 className="text-2xl sm:text-[35px] font-[600] text-gray-900 mb-3 mt-6">
               {project.title}
             </h2>
             <h2 className="sm:text-[26px] text-[16px] text-gray-400 pb-4">

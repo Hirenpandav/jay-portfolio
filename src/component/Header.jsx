@@ -16,7 +16,7 @@ const Header = () => {
                   <motion.img 
                     src={logo} 
                     alt="ova" 
-                    className="h-10 origin-bottom-right"
+                    className="h-9 origin-bottom-right"
                     animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
                     transition={{
                       duration: 1.5,
@@ -50,7 +50,7 @@ const Header = () => {
                 className="bg-white px-6 py-6 rounded-3xl shadow-lg backdrop-blur-sm border border-gray-200"
               >
                 <div className="flex justify-between items-start">
-                  <img src={logo} alt="ova" className="h-8" />
+                  <img src={logo} alt="ova" className="h-9" />
                   <button onClick={() => setIsOpen(false)}>
                     <X className="w-5 h-5 text-gray-500" />
                   </button>

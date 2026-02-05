@@ -42,7 +42,7 @@ collaboration with developers.
                         <div className='flex gap-4 mt-2 flex-wrap'>
                             <Link
                                 to="/contact"
-                                className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
+                                className="border border-gray-300 rounded-full px-5 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
                                 >
                                 Get in touch
                                 <img src={aeroUp} alt="" className='w-4 h-4' />
