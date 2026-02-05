@@ -14,6 +14,7 @@ import jagods from '../assets/jagods.png'
 import ondc from '../assets/Ondc.png'
 import ecommerce from '../assets/Ecommerce.png'
 import gg_product_business from '../assets/GG_product_business-page.png'
+import stampIt from '../assets/stampit.png'
 import vendor from '../assets/Vendor.png'
 import upos from '../assets/Upos.png'
 
@@ -45,57 +46,63 @@ function Homepage() {
 
   const projectsData = [
     {
-      title: "Franchise360 Landing Page",
+      title: "Franchise360",
       description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
       image: franchise_360_landing,
       link: "#contact"
     },
     {
-      title: "Franchise360 Dashboard",
+      title: "Loyalty Card Made Digital",
       description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
-      image: franchise_360_dashboard,
+      image: stampIt,
       link: "#contact"
     },
-    {
-      title: "Jagods Food Delivery App",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
-      image: jagods,
-      link: "#contact"
-    },
-    {
-      title: "ONDC (Open Network for Digital Commerce)",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
-      image: ondc,
-      link: "#contact"
-    },
-    {
-      title: "Ecommerce on Global Garner Universal App",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
-      image: ecommerce,
-      link: "#contact"
-    },
+    // {
+    //   title: "Franchise360 Dashboard",
+    //   description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+    //   image: franchise_360_dashboard,
+    //   link: "#contact"
+    // },
+    // {
+    //   title: "Jagods Food Delivery App",
+    //   description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+    //   image: jagods,
+    //   link: "#contact"
+    // },
+    // {
+    //   title: "ONDC (Open Network for Digital Commerce)",
+    //   description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+    //   image: ondc,
+    //   link: "#contact"
+    // },
+    // {
+    //   title: "Ecommerce on Global Garner Universal App",
+    //   description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+    //   image: ecommerce,
+    //   link: "#contact"
+    // },
     {
       title: "Global Garner Product Business Page",
       description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
       image: gg_product_business,
       link: "#contact"
     },
-    {
-      title: "Vendor App",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
-      image: vendor,
-      link: "#contact"
-    },
-    {
-      title: "UPOS Dashboard (Universal Point of Sale)",
-      description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
-      image: upos,
-      link: "#contact"
-    },
+    // {
+    //   title: "Vendor App",
+    //   description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+    //   image: vendor,
+    //   link: "#contact"
+    // },
+    // {
+    //   title: "UPOS Dashboard (Universal Point of Sale)",
+    //   description: "Create a stunning, stylized landscape while discovering digital art fundamentals, and the paint, smudge and erase tools in procreate.",
+    //   image: upos,
+    //   link: "#contact"
+    // },
   ];
 
   const introText =
-    "Hello, I'm Jay. I'm a designer passionate about creating beautiful, intuitive interfaces that help people. I focus on thoughtful details, seamless experiences, and meaningful impact.";
+    "Hi, I’m Jay a product designer who creates clean, intuitive interfaces that feel effortless to use.I focus on thoughtful design, smooth user experiences, and building products that make a real impact.";
 
   return (
     <div className="homepage">
@@ -127,7 +134,7 @@ function Homepage() {
         <div className='max-w-5xl w-full container mx-auto flex flex-col'>
           <h1
             ref={textRef}
-            className='text-[40px] sm:text-[55px] text-left font-semibold flex flex-wrap leading-relaxed'
+            className='text-[40px] sm:text-[55px] text-left font-semibold flex flex-wrap leading-tight'
           >
             {introText.split(" ").map((word, i) => (
               <span key={i} className="transition-colors duration-500 mr-2">
@@ -157,7 +164,7 @@ function Homepage() {
       {projectsData.map((project, index) => (
         <section key={index} className='px-6 mx-auto pb-20'>
           <div className="max-w-5xl mx-auto text-left">
-            <div className="w-full rounded-3xl overflow-hidden shadow-lg m-1">
+            <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden shadow-lg ">
               <img
                 src={project.image}
                 alt={`${project.title} Preview`}
@@ -173,13 +180,13 @@ function Homepage() {
             </h2>
           </div>
           <div className='max-w-5xl mx-auto flex justify-left'>
-            <a
+            {/* <a
               href={project.link}
               className="border border-gray-300 rounded-full px-6 py-2 text-black flex items-center gap-2 hover:bg-black hover:text-white transition"
             >
               View More
               <img src={aeroUp} alt="" className='w-4 h-4' />
-            </a>
+            </a> */}
           </div>
         </section>
       ))}

@@ -12,13 +12,27 @@ const Header = () => {
           {!isOpen && (
             <nav className="flex justify-between items-center bg-white py-3 rounded-full shadow-lg backdrop-blur-sm border border-gray-200">
               <div className="flex items-center px-4">
-                <Link to="/"><img src={logo} alt="ova" className="h-8" /></Link>
+                <Link to="/">
+                  <motion.img 
+                    src={logo} 
+                    alt="ova" 
+                    className="h-10 origin-bottom-right"
+                    animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatDelay: 10,
+                      ease: "easeInOut"
+                    }}
+                    whileHover={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+                  />
+                </Link>
               </div>
               <div className="md:flex hidden items-center">
-                <Link to="/" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>Work</Link>
-                <Link to="/about" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/about' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>About</Link>
-                <Link to="/contact" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>Contact</Link>
-                <Link to="/resume" className={`px-5 py-1.5 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>Resume</Link>                
+                <Link to="/" className={`px-5 py-3 rounded-full font-medium ${location.pathname === '/' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>Work</Link>
+                <Link to="/about" className={`px-5 py-3 rounded-full font-medium ${location.pathname === '/about' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>About</Link>
+                <Link to="/contact" className={`px-5 py-3 rounded-full font-medium ${location.pathname === '/contact' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>Contact</Link>
+                <Link to="/resume" className={`px-5 py-3 rounded-full font-medium ${location.pathname === '/resume' ? 'bg-black text-white' : 'text-gray-500 hover:text-black'}`}>Resume</Link>                
               </div>
               <button className="md:hidden px-4" onClick={() => setIsOpen(true)}>
                 <Menu className="text-black w-6 h-6 " />
