@@ -102,7 +102,7 @@ function Homepage() {
   ];
 
   const introText =
-    "Hi, I’m Jay a product designer who creates clean, intuitive interfaces that feel effortless to use.I focus on thoughtful design, smooth user experiences, and building products that make a real impact.";
+    "Hi, I’m Jay a product designer who creates clean, intuitive interfaces that feel effortless to use. I focus on thoughtful design, smooth user experiences, and building products that make a real impact.";
 
   return (
     <div className="homepage">
